@@ -146,12 +146,94 @@ console.log(edad2);
 
 // El operador typeof devuelve el tipo de dado
 
-console.log (typeof undefined);
-console.log (typeof 0);
-console.log(typeof true);
-console.log(typeof 10n);
-console.log(typeof "hola");
+console.log (typeof undefined); //undefined
+console.log (typeof 0);  //number
+console.log(typeof true); //boolean
+console.log(typeof 10n); //biginit
+console.log(typeof "hola"); //string
 
+console.log(alert); //fuction **
+// console.log(null); //object error de javascrip
+// console.log (Math); //object
+
+//interacciones : alert, prompt, confirm
+// alert - ventana modal
+// alert("hola mundo");
+
+
+//prompt
+
+//prompt ('titulo de msg', 'hola');
+
+// De esta forma se almacena
+/*let nombress = prompt ('titulo de msg', 'hola');
+alert (nombress); */
+
+// confirm
+/*let n = confirm('¿Te gusta el helado?');
+console.log(n); // true si presionan ok y false si presionan cancelar */
+
+//conversion de tipo
+
+//explicita e implicita
+//Convertir a String
+
+let valor = true; 
+console.log(typeof valor);
+
+valor = String(valor); // true 
+valor = String(false); //false
+valor = string (nul); //null
+valor = String (undefined); //undefined
+console.log(valor);
+console.log(typeof valor);
+
+// convertir a numero
+//alert ('6'/ '2'); //3
+
+let cadena = "123";
+let num_cad = Number(cadena); //123 
+console.log(Number('hola')); //Nan
+
+/* undefined -> nan
+null -> 0
+true -> 1
+false -> 0
+string -> 0
+string 'hola' Nan
+*/
+
+//operadores basicos 
+
+//operadores unarios y binarios
+
+let a, b, res;
+a = 2;
+b =6 ;
+
+res = a +b ;
+res = a- b;
+res = a*b;
+res = a/b;
+res =a %b; // mod
+res = a**b; //potencia
+
+
+//posicion del incremento o decremento 
+a = 1;
+b = a ++;
+console.log(b);
+
+a = 2;
+a --;
+console.log(a);
+
+a = 1;
+b = a++;
+c = a;
+
+console.log(b); //1
+console.log(c);//2
 
 
 
