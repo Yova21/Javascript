@@ -500,7 +500,7 @@ for(i=0; i<=10; i++);{
 /*
 // decreciente
  console.log('**** Segundo for ***');
-for(i=0; i=10; i--);{
+for(i=0; i<=10; i--);{
  console.log(`El valor de i es ${i}`);
  
 } */
@@ -532,12 +532,195 @@ while(1){
 
 for (i=1; i<= 10; i++){
  if (i%2 !=0) continue;
- console.log(`${i} es un numero par.`)
+ console.log(`${i} es un numero par.`);
 }
 
 
+console.log('**** Etiquetas ***');
+// etiqueta para break y continue
+principal: for (i = 0; i<= 10; i++){ 
+for (j=0; j<=10; j++){
+    console.log(`la suma de i+j es ${i+j}`);
+    if (j == 2) break principal;
+        
+    
+}
+}
+console.log('salio')
+
+
+//switch
+
+/* switch(valor):{
+    case valor1:
+        [break];
+        default:
+            [break];
+}
+
+*/
+
+a = 2 +2;
+switch (a){
+    case 3:
+        console.log('el resultado es 3');
+        break;
+        case 4:
+            console.log('El resultado es 4');
+            break;
+            default:
+                console.log('ninguno de los dos valores');
+}
+
+// FUNCIONES
+
+/*
+function nombre ([parametros]){
+
+} 
+*/
+
+function saludar (){
+    console.log('hola mundo');
+}
+saludar();
+
+
+// variable local 
+
+function saludar_nom(){
+    let nombre5 = 'roberto'; // variable local
+    console.log(`Hola ${nombre}`);
+}
+saludar_nom();
+
+// variable externa
+let nombre51;
+function saludar_no(){
+     nombre51 = 'roberto'; // variable local
+    console.log(`Hola ${nombre51}`);
+}
+saludar_no();
+
+
+// Shadows
+let nombre52 = 'carlos';
+function saludar_no(){
+    let nombre52 = 'roberto'; // variable local
+    console.log(`Hola ${nombre52}`);
+}
+console.log(`hola ${nombre52}`);
+saludar_no();
+
+
+
+// Parametros
+console.log('********* Parametros ******');
+function mensaj(de, texto){
+    console.log(`${de}: ${texto}`)
+}
+mensaj('roberto', 'hola maria')
+mensaj('lISSY', 'Hola mor')
+
+
+//valores predeterminados
+console.log('********* Parametros predeterminado ******');
+function mensaj_2(de, texto = ''){
+    console.log(`${de}: ${texto}`)
+}
+mensaj_2('roberto', 'hola maria')
+mensaj_2('lISSY', 'Hola mor')
+
+
+
+function sumar(a, b){
+    return a+b;
+}
+console.log(sumar(4+5));
+
+
+function sumar_Dos(a,b){
+    return null;
+}
+console.log(sumar(4,5));
+console.log(sumar_Dos(4,5));
+console.log(sumar_Dos()=== undefined);
+
+//Huf que devuelva la sumatoria de los numeros pares
+
+function sumatoria_pares(x){
+ sumatoria = 0;
+    for(s=0; s<=x; s++){
+        if (es_par(s)) sumatoria = sumatoria + s;        
+    }
+return sumatoria;
+}
+function es_par(n){
+    return n % 2 == 0;
+}
+
+console.log(sumatoria_pares(10));
+
+
+// Epresion y declaracion de una funcion
+
+// declarar una funcion
+
+function hola(){
+    console.log('saludar');
+
+}
+console.log(hola);
+
+let aux = hola;
+aux();
+
+// expresion de una function 
+let hola_dos = function(){
+    console.log('hola mundo');
+};
+//console.log(hola_dos);
+
+// funciones flecha 
+
+
+let hola_dos_flecha = () => console.log('hola mundo');
+let sumar_ex = function(a,b){
+    return  a + b;
+}
+
+console.log(sumar_ex(4,5));
+
+
+let hola_dos_flecha = () => console.log('hola mundo');
+
+let saludar_nombre_Xx= function(nombre){
+    console.log(`hola ${nombre}`);
+}
+let saludar_nombre_Xx_flecha = (nombre) => console.log(`hola ${nombre}!`) ;
+saludar_nombre_Xx_flecha = nombre => console.log(`hola ${nombre}!`);
+
+//*****
+ 
+let sumar_ex = function (a,b){
+    return a+b;
+
+}
+let sumar_ex_flecha = (a, b) => {
+    return a+b;
+};
+
+
+// creacion de una funcion de manera dinamica
+
+let saludo_edad = (edad > 18) ? ()=> console.log('es mayor de edad'): () => console.log('es menor de edad');
 
 
 
 
+
+
+//let sumar_ex_flecha = (a,b) => return a + b;
+
+// calvag es una funcion que tiene como parametro otra funcion
 
