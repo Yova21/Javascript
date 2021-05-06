@@ -458,16 +458,82 @@ console.log(!!undefined); // false == boolean (undefeined)
 // nullish o fusion de nulos
 
 //si todos los operandos han sido evaluados son nulos o undefined regresa el ultimo.
-
+console.log (' prueba de test');
 a = null?? undefined ?? undefined?? null?? "hola" ?? null ?? 'carlos'; // "hola"
-a = undefined?? undefined ?? undefined ?? null?? null?? null;//null
+ a = undefined?? undefined ?? undefined ?? null?? null?? null;//null
 
 
 
+//bucles while y for
+// while (condicion){}
+console.log('***** primer while******');
+i=0
+while (i<=10)
+{
+    console.log(`el valor de i es${i}`);
+    i++;
+}
+
+    
+// do - while
+/* do{
+
+}while (condicion); */
+console.log('segunda prueba ****');
+i = 1
+do{
+    console.log(`el valor de i es: ${i}`);
+    i++;
+}while(i<=10);
+
+// ciclo for
+/*
+for (comienzo; condicion; incremento){
+
+} 
+ */  //incremento
+ console.log('**** Primer for ***');
+for(i=0; i<=10; i++);{
+ console.log(`El valor de i es ${i}`);
+
+}
+/*
+// decreciente
+ console.log('**** Segundo for ***');
+for(i=0; i=10; i--);{
+ console.log(`El valor de i es ${i}`);
+ 
+} */
+
+//alcance de la variable
+console.log('**** PRUBEA ALCAN***');
+let k = 0;
+for(k=0; k<=10; k++ ){
+    console.log(`El valor de k es : ${k}`);
+}
 
 
+//Saltado de partes
+console.log('*******');
+ m = 0;
+for(; m<=10; m++ ){
+    console.log(`El valor de k es : ${m}`);
+}
 
+console.log(`El valor de k por fuera es: ${m}`); 
 
+//BREAKY CONTINUE
+console.log('****** BrEAK ****');
+o = 0;
+while(1){
+    console.log(`el valor de o es ${o++}`);
+    if(o == 11) break;
+}
+
+for (i=1; i<= 10; i++){
+ if (i%2 !=0) continue;
+ console.log(`${i} es un numero par.`)
+}
 
 
 
